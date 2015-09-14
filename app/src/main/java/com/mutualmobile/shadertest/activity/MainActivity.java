@@ -1,16 +1,33 @@
-package com.mutualmobile.shadertest;
+package com.mutualmobile.shadertest.activity;
 
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.mutualmobile.shadertest.R;
+import com.mutualmobile.shadertest.adapter.ShaderAdapter;
+import com.mutualmobile.shadertest.fragment.BaseFragment;
+import com.mutualmobile.shadertest.fragment.RainbowFragment;
+
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
+
+    private ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ArrayList<BaseFragment> list = new ArrayList<>();
+        list.add(new RainbowFragment());
+
+        mViewPager = (ViewPager) findViewById(R.id.view_pager);
+        ShaderAdapter adapter = new ShaderAdapter(getFragmentManager(), list);
+        mViewPager.setAdapter(adapter);
     }
 
     @Override
