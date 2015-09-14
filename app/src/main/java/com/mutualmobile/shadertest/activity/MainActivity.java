@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import com.mutualmobile.shadertest.R;
 import com.mutualmobile.shadertest.adapter.ShaderAdapter;
 import com.mutualmobile.shadertest.fragment.BaseFragment;
+import com.mutualmobile.shadertest.fragment.BitmapClampFragment;
+import com.mutualmobile.shadertest.fragment.BitmapMirrorFragment;
 import com.mutualmobile.shadertest.fragment.BitmapRepeatFragment;
 import com.mutualmobile.shadertest.fragment.RainbowFragment;
 
@@ -25,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<BaseFragment> list = new ArrayList<>();
         list.add(new BitmapRepeatFragment());
+        list.add(new BitmapMirrorFragment());
+        list.add(new BitmapClampFragment());
         list.add(new RainbowFragment());
 
         mViewPager = (ViewPager) findViewById(R.id.view_pager);
