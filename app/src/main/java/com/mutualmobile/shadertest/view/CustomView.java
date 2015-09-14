@@ -7,7 +7,9 @@ import android.util.AttributeSet;
 import android.view.View;
 
 /**
- * Created by ronald.lovejoy on 9/13/15.
+ *
+ * Created by Ronald Lovejoy (ronald.lovejoy@mutualmobile.com) on 9/13/15.
+ *
  */
 public class CustomView extends View {
     protected final Paint mBlackPen = new Paint();
@@ -30,6 +32,7 @@ public class CustomView extends View {
     private void init(Context context) {
         mBlackPen.setStyle(Paint.Style.STROKE);
         mBlackPen.setColor(context.getResources().getColor(android.R.color.black));
+        mBlackPen.setAntiAlias(true);
     }
 
     @Override

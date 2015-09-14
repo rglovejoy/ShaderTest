@@ -13,7 +13,11 @@ import com.mutualmobile.shadertest.fragment.BitmapClampFragment;
 import com.mutualmobile.shadertest.fragment.BitmapMirrorFragment;
 import com.mutualmobile.shadertest.fragment.BitmapOffsetRepeatFragment;
 import com.mutualmobile.shadertest.fragment.BitmapRepeatFragment;
+import com.mutualmobile.shadertest.fragment.ClampLinearGradientFragment;
+import com.mutualmobile.shadertest.fragment.MirrorLinearGradientFragment;
+import com.mutualmobile.shadertest.fragment.ModifiedRainbowLinearGradientFragment;
 import com.mutualmobile.shadertest.fragment.RainbowFragment;
+import com.mutualmobile.shadertest.fragment.RainbowLinearGradientFragment;
 import com.mutualmobile.shadertest.fragment.SimpleLinearGradientFragment;
 
 import java.util.ArrayList;
@@ -33,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
         list.add(new BitmapClampFragment());
         list.add(new BitmapOffsetRepeatFragment());
         list.add(new SimpleLinearGradientFragment());
+        list.add(new ClampLinearGradientFragment());
+        list.add(new MirrorLinearGradientFragment());
+        list.add(new RainbowLinearGradientFragment());
+        list.add(new ModifiedRainbowLinearGradientFragment());
         list.add(new RainbowFragment());
 
         mViewPager = (ViewPager) findViewById(R.id.view_pager);
